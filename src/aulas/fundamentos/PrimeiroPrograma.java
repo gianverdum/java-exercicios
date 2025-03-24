@@ -1,4 +1,4 @@
-package fundamentos;
+package aulas.fundamentos;
 
 /**
  * @author gian.verdum <@gmail.com>
