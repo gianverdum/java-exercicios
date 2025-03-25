@@ -4,7 +4,7 @@ public class Ternario {
 
     public static void main(String[] args) {
 
-        double avg = 7.9;
+        double avg = 4.9;
         String partialResult = avg >= 5.0 ?
                 "em Recuperação" : "Reprovado";
         String finalResult = avg >= 7.0 ?
