@@ -2,10 +2,12 @@ package aulas.oo.heranca.desafio;
 
 public class Ferrari extends Car {
 
-    @Override
-    void accelerate() {
-        super.accelerate();
-        super.accelerate();
-        super.accelerate();
+    Ferrari() {
+        this(315);
+    }
+
+    Ferrari(int maxSpeed) {
+        super(maxSpeed);
+        delta = 350;
     }
 }

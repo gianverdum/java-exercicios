@@ -8,10 +8,7 @@ public class Game {
         p1.x = 10;
         p1.y = 10;
 
-        Hero p2 = new Hero();
-        p2.x = 10;
-        p2.y = 11;
-
+        Hero p2 = new Hero(10, 11);
 
         System.out.println("Monster life is " + p1.life);
         System.out.println("Hero life is " + p2.life);

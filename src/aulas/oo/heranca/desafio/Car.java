@@ -1,11 +1,20 @@
 package aulas.oo.heranca.desafio;
 
 public class Car {
-
+    final int MAX_SPEED;
     int speed = 0;
+    int delta = 5;
+
+    Car(int maxSpeed) {
+        MAX_SPEED = maxSpeed;
+    }
 
     void accelerate() {
-        speed += 5;
+        if (speed + delta > MAX_SPEED) {
+            speed = MAX_SPEED;
+        } else {
+            speed += delta;
+        }
     }
 
     void brake() {

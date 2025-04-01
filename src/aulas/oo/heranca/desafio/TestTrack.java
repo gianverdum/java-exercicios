@@ -3,7 +3,7 @@ package aulas.oo.heranca.desafio;
 public class TestTrack {
 
     public static void main(String[] args) {
-        Car f = new Ferrari();
+        Car f = new Ferrari(400);
         f.accelerate();
 
         Car c = new Civic();

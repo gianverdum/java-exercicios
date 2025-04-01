@@ -2,6 +2,10 @@ package aulas.oo.heranca;
 
 public class Hero extends Player{
 
+    Hero(int x, int y) {
+        super(x, y);
+    }
+
     boolean attack(Player opponent) {
 
         boolean attack1 = super.attack(opponent);
