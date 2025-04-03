@@ -7,7 +7,7 @@ import aulas.oo.heranca.desafio.Ferrari;
 public class TestTrack {
 
     public static void main(String[] args) {
-        Car f = new Ferrari(400);
+        Ferrari f = new Ferrari(400);
         f.accelerate();
 
         Car c = new Civic();
@@ -16,8 +16,11 @@ public class TestTrack {
         System.out.println("Ferrari Speed: " + f.getSpeed());
         System.out.println("Civic Speed: " + c.getSpeed());
 
+        f.turboOn();
+        f.airConditionerOn();
         f.accelerate();
         f.accelerate();
+        f.turboOff();
         f.accelerate();
         c.accelerate();
         c.accelerate();
