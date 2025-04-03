@@ -1,4 +1,8 @@
-package aulas.oo.heranca.desafio;
+package aulas.oo.heranca.teste;
+
+import aulas.oo.heranca.desafio.Car;
+import aulas.oo.heranca.desafio.Civic;
+import aulas.oo.heranca.desafio.Ferrari;
 
 public class TestTrack {
 

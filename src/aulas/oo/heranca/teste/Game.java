@@ -1,4 +1,8 @@
-package aulas.oo.heranca;
+package aulas.oo.heranca.teste;
+
+import aulas.oo.heranca.Direction;
+import aulas.oo.heranca.Hero;
+import aulas.oo.heranca.Monster;
 
 public class Game {
 

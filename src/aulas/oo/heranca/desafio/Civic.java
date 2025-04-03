@@ -2,7 +2,7 @@ package aulas.oo.heranca.desafio;
 
 public class Civic extends Car {
 
-    Civic() {
+    public Civic() {
         super(212);
     }
 }

@@ -2,16 +2,16 @@ package aulas.oo.heranca;
 
 public class Player {
 
-    int life = 100;
-    int x;
-    int y;
+    public int life = 100;
+    public int x;
+    public int y;
 
-    Player(int x, int y) {
+    protected Player(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    boolean attack(Player opponent) {
+    public boolean attack(Player opponent) {
 
         int deltaX = Math.abs(x - opponent.x);
         int deltaY = Math.abs(y - opponent.y);
@@ -27,7 +27,7 @@ public class Player {
         return false;
     }
 
-    boolean move(Direction direction) {
+    public boolean move(Direction direction) {
         switch (direction) {
             case UP:
                 y--;

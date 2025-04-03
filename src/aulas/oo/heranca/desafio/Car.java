@@ -5,11 +5,11 @@ public class Car {
     int speed = 0;
     int delta = 5;
 
-    Car(int maxSpeed) {
+    protected Car(int maxSpeed) {
         MAX_SPEED = maxSpeed;
     }
 
-    void accelerate() {
+    public void accelerate() {
         if (speed + delta > MAX_SPEED) {
             speed = MAX_SPEED;
         } else {
@@ -17,7 +17,7 @@ public class Car {
         }
     }
 
-    void brake() {
+    public void brake() {
         if (speed >= 5) {
             speed -= 5;
         } else  {
@@ -25,7 +25,7 @@ public class Car {
         }
     }
 
-    int getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 }

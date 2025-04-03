@@ -2,11 +2,12 @@ package aulas.oo.heranca;
 
 public class Hero extends Player{
 
-    Hero(int x, int y) {
+    public Hero(int x, int y) {
         super(x, y);
     }
 
-    boolean attack(Player opponent) {
+    @Override
+    public boolean attack(Player opponent) {
 
         boolean attack1 = super.attack(opponent);
         boolean attack2 = super.attack(opponent);
