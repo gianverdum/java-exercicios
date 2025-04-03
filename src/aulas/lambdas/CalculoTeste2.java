@@ -10,5 +10,7 @@ public class CalculoTeste2 {
 
         calculo = (a, b) -> a * b;
         System.out.println(calculo.executar(2, 3));
+        System.out.println(calculo.legal());
+        System.out.println(Calculo.massa());
     }
 }
