@@ -18,6 +18,7 @@ public class TestTrack {
 
         f.turboOn();
         f.airConditionerOn();
+        System.out.println(f.airConditionerSpeed());
         f.accelerate();
         f.accelerate();
         f.turboOff();
