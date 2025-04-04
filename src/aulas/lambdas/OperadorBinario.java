@@ -2,6 +2,7 @@ package aulas.lambdas;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
+import java.util.function.Function;
 
 public class OperadorBinario {
 
@@ -20,5 +21,10 @@ public class OperadorBinario {
         };
 
         System.out.println(resultado.apply(9.7, 4.1));
+
+        Function<Double, String> conceito =
+                m -> m >= 7 ? "Reprovado" : "Aprovado";
+
+        System.out.println(media.andThen(conceito).apply(9.7, 5.1));
     }
 }
