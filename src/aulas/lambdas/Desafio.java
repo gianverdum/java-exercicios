@@ -21,28 +21,48 @@ public class Desafio {
          * 5. Formatar: R$ 1234,56
          */
 
-        BiFunction<Double, Double, Double> precoComDesconto =
-                (valorProduto, valorDesconto) -> valorProduto * valorDesconto;
-        UnaryOperator<Double> valorComImposto =
-                valorProduto -> valorProduto >= 2500 ? valorProduto * (1 + 0.085) : valorProduto;
-        UnaryOperator<Double> valorComFrete =
-                valorProduto -> valorProduto >= 3000 ? valorProduto + 100 : valorProduto;
+//        BiFunction<Double, Double, Double> precoComDesconto =
+//                (valorProduto, valorDesconto) -> valorProduto * valorDesconto;
+//        UnaryOperator<Double> valorComImposto =
+//                valorProduto -> valorProduto >= 2500 ? valorProduto * (1 + 0.085) : valorProduto;
+//        UnaryOperator<Double> valorComFrete =
+//                valorProduto -> valorProduto >= 3000 ? valorProduto + 100 : valorProduto;
+//        UnaryOperator<Double> arredondar =
+//                valorProduto -> Math.round(valorProduto * 100.0) / 100.0;
+//        Function<Double, String> formatar =
+//                valorProduto -> NumberFormat
+//                        .getCurrencyInstance(Locale
+//                        .forLanguageTag("pt-BR"))
+//                        .format(valorProduto);
+//
+//        Function<Produto, String> pipeline =
+//                produto -> precoComDesconto
+//                        .andThen(valorComImposto)
+//                        .andThen(valorComFrete)
+//                        .andThen(arredondar)
+//                        .andThen(formatar)
+//                        .apply(p.preco, p.desconto);
+//
+//        System.out.println(pipeline.apply(p));
+
+        Function<Produto, Double> precoFinal =
+                produto -> produto.preco * (1 - p.desconto);
+        UnaryOperator<Double> impostoMunicipal =
+                preco -> preco >= 2500 ? preco * 1.085 : preco;
+        UnaryOperator<Double> frete =
+                preco -> preco >= 3000 ? preco + 100 : preco;
         UnaryOperator<Double> arredondar =
-                valorProduto -> Math.round(valorProduto * 100.0) / 100.0;
+                preco -> Double.parseDouble(String.format("%.2f", preco));
         Function<Double, String> formatar =
-                valorProduto -> NumberFormat
-                        .getCurrencyInstance(Locale
-                        .forLanguageTag("pt-BR"))
-                        .format(valorProduto);
+                preco -> ("R$" + preco).replace(",", ".");
 
-        Function<Produto, String> pipeline =
-                produto -> precoComDesconto
-                        .andThen(valorComImposto)
-                        .andThen(valorComFrete)
-                        .andThen(arredondar)
-                        .andThen(formatar)
-                        .apply(p.preco, p.desconto);
+        String preco = precoFinal
+                .andThen(impostoMunicipal)
+                .andThen(frete)
+                .andThen(arredondar)
+                .andThen(formatar)
+                .apply(p);
+        System.out.println("O preço final é " + preco);
 
-        System.out.println(pipeline.apply(p));
     }
 }
