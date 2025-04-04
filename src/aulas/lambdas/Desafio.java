@@ -34,8 +34,6 @@ public class Desafio {
                         .getCurrencyInstance(Locale
                         .forLanguageTag("pt-BR"))
                         .format(valorProduto);
-        Consumer<String> imprimirValorFormatado =
-                System.out::println;
 
         Function<Produto, String> pipeline =
                 produto -> precoComDesconto
@@ -45,6 +43,6 @@ public class Desafio {
                         .andThen(formatar)
                         .apply(p.preco, p.desconto);
 
-        imprimirValorFormatado.accept(pipeline.apply(p));
+        System.out.println(pipeline.apply(p));
     }
 }
