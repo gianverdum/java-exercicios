@@ -33,4 +33,8 @@ public class Aluno {
     public int hashCode() {
         return Objects.hash(nome, nota, behave);
     }
+
+    public String getNome() {
+        return nome;
+    }
 }
