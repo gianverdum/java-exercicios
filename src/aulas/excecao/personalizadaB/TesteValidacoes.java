@@ -1,6 +1,9 @@
-package aulas.excecao.personalizadaA;
+package aulas.excecao.personalizadaB;
 
 import aulas.excecao.Aluno;
+import aulas.excecao.personalizadaB.NumeroForaIntervaloException;
+import aulas.excecao.personalizadaB.StringVaziaException;
+import aulas.excecao.personalizadaB.Validar;
 
 public class TesteValidacoes {
 
