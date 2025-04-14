@@ -13,4 +13,9 @@ public class ListaUtil {
         return lista.getLast();
 
     }
+
+    public static <A, B, C> C teste(A a, B b) {
+        C c = null;
+        return c;
+    }
 }
