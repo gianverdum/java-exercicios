@@ -1,3 +1,7 @@
+# Custom
+.env
+lib/
+
 ### IntelliJ IDEA ###
 .idea/
 *.iml
