@@ -12,7 +12,8 @@ public class FabricaConexao {
         try {
             Dotenv dotenv = Dotenv.load();
 
-            String url = dotenv.get("URL");
+            String dbName = "curso_java";
+            String url = dotenv.get("URL") + dbName;
             String usuario = dotenv.get("USERNAME");
             String senha = dotenv.get("PASSWORD");
 
