@@ -1,6 +1,6 @@
 # Custom
 .env
-lib/
+libs/
 
 ### IntelliJ IDEA ###
 .idea/
