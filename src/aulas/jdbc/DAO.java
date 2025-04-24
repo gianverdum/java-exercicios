@@ -13,6 +13,8 @@ public class DAO {
         try {
             PreparedStatement stmt = getConexao().prepareStatement(
                     sql, PreparedStatement.RETURN_GENERATED_KEYS);
+            adicionarAtributos(stmt, params);
+
             if(stmt.executeUpdate() > 0) {
                 ResultSet resultado = stmt.getGeneratedKeys();
 
@@ -24,6 +26,16 @@ public class DAO {
             return -1;
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public void close() {
+        try {
+            getConexao().close();
+        } catch (SQLException e) {
+
+        } finally {
+            conexao = null;
         }
     }
 
